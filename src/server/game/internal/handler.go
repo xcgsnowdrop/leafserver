@@ -14,6 +14,7 @@ func init() {
 }
 
 func handler(m interface{}, h interface{}) {
+	// 实际调用*chanrpc.Server.Register()，为每个消息类型，注册该消息的处理函数
 	skeleton.RegisterChanRPC(reflect.TypeOf(m), h)
 }
 

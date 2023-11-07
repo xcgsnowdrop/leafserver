@@ -8,7 +8,7 @@ import (
 var Processor = json.NewProcessor()
 
 func init() {
-	// 这里我们注册了一个 JSON 消息 Hello
+	// 这里我们注册了一个 JSON 消息 Hello, 此处Register()中拿到的msgType是：*msg.Hello
 	Processor.Register(&Hello{})
 }
 
